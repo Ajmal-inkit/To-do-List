@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background-color: burlywood;
+            border-style: solid;
+            margin: 50px 550px;
+            text-align: center;
+        }
+        body{
+            background-image: url("{{url_for('static',filename='cover.jpg')}}");
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <h2>Sign up here</h2>
+    <form method="post">
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name"><br>
+        <label for="number">Number</label><br>
+        <input type="text" name="number" id="number"><br>
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username"><br>
+        <label for="password">Password</label><br>
+        <input type="text" name="password" id="password"><br>
+        <input type="submit" value="Sign Up">
+    </form>
+</body>
+</html>

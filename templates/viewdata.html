@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body {
+        background-image: url("{{url_for('static',filename='cover.jpg')}}");
+        font-size: larger;
+        text-align: center;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    table,th,td {
+        border-style: solid;
+        background-color: burlywood;
+    }
+    table {
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    <h1>Data</h1>
+    <table class="center">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Deadline</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{item.task}}</td>
+                <td>{{item.deadline}}</td>
+                <td><a href="{{url_for('edit', id=item.id)}}">EDIT</a>
+                    <a href="{{url_for('delete', id=item.id)}}">DELETE</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<a href="/dashboard">Add Task</a><br>
+<a href="/">Logout</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signed UP Page</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("{{url_for('static',filename='cover.jpg')}}");
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>Successfully signed up</h1>
+    <a href="{{ url_for('index')}}">Go to Homepage</a>
+</body>
+</html>

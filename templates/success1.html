@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        body {
+            background-image: url("{{url_for('static',filename='cover.jpg')}}");
+            font-size: larger;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task stored</h1>
+    <a href="/dashboard">Add more data</a>
+    <a href="/viewdata">Data Page</a>
+</body>
+</html>

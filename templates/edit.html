@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            background-color: burlywood;
+            border-style: solid;
+            margin: 50px 550px;
+            text-align: center;
+        }
+        body {
+            background-image: url("{{url_for('static',filename='cover.jpg')}}");
+            font-size: larger;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Edit Data</h1>
+    <form method="POST">
+        <label for="task">Task</label><br>
+        <input type="text" name="task" id="task" value="{{ data.task }}" required><br>
+        <label for="deadline">Deadline</label><br>
+        <input type="date" name="deadline" id="deadline" value="{{ data.deadline }}" required><br>
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

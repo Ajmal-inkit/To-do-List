@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        body {
+            background-image: url("{{url_for('static',filename='cover.jpg')}}");
+            font-size: larger;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            background-color: burlywood;
+            border-style: solid;
+            margin: 50px 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello User <br>
+    Welcome to the To-Do List App</h1>
+    <form method="POST">
+        <h2>Enter the task to do</h2>
+        <label for="task">Task:</label>
+        <input type="text" name="task" id="task"><br>
+        <label for="deadline">Deadline:</label>
+        <input type="date" name="deadline" id="deadline" placeholder="dd-mm-yyyy"><br>
+        
+        <input type="submit" value="Add">
+    </form>
+    <a href="{{url_for('viewdata')}}">View Task</a>
+    <a href="{{url_for('index')}}">Logout</a>
+</body>
+</html>

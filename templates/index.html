@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: black;
+            
+        }
+        .we {
+            text-align: center;
+            font-size: larger;
+        }
+        body {
+            background-image: url("{{ url_for('static',filename='cover.jpg') }}");
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the to-do list app</h1>
+    <hr>
+    <div class="we">
+        <p style="color: white;">Already have an account?</p>
+        <a href="{{url_for('login')}}">Login here</a><br>
+        <p style="color: white;">If you want to sign up</p>
+        <a href="{{url_for('sign_up')}}">Sign up</a>
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static',filename='cover.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .we {
+            text-align: center;
+            font-size: 1.2em;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .we p {
+            margin: 10px 0;
+        }
+        .we a {
+            color: #00f;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        /* .we a:hover {
+            color: #0ff;
+        } */
+        /* hr {
+            width: 50%;
+            border: 1px solid #fff;
+            margin: 20px 0;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Welcome to the to-do list app</h1>
+    <div class="we">
+        <p>Already have an account?</p>
+        <a href="{{url_for('login')}}">Login here</a><br>
+        <p>If you want to sign up</p>
+        <a href="{{url_for('sign_up')}}">Sign up</a>
+    </div>
+</body>
+</html>
